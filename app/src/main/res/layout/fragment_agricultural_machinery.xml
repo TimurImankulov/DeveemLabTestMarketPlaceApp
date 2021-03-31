@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_Image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="Toolbar"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_Views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp16"
+                android:drawableLeft="@drawable/ic_view"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="789 просмотров"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Image" />
+
+            <TextView
+                android:id="@+id/tv_UpDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Дата обновления"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Image" />
+
+            <TextView
+                android:id="@+id/tv_Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Бишкек"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Views" />
+
+            <TextView
+                android:id="@+id/tv_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginEnd="@dimen/dp24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="03 Май, 2020"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_UpDate" />
+
+            <Button
+                android:id="@+id/btn_Call"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp36"
+                android:layout_marginEnd="@dimen/dp8"
+                android:background="@drawable/bg_btn_green"
+                android:drawableLeft="@drawable/ic_phone"
+                android:elevation="@dimen/dp16"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Позвонить"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toStartOf="@id/btn_Message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Location" />
+
+            <Button
+                android:id="@+id/btn_Message"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp36"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/bg_btn_grey"
+                android:drawableLeft="@drawable/ic_message"
+                android:elevation="@dimen/dp16"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Написать"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_Call"
+                app:layout_constraintTop_toBottomOf="@id/tv_Location" />
+
+            <TextView
+                android:id="@+id/tv_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Продаю домашнюю \nбиблиотеку, недорого"
+                app:layout_constraintTop_toBottomOf="@id/btn_Call"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/sp18"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp24"/>
+
+            <TextView
+                android:id="@+id/tv_Descr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Книги новые и б\\у в хорошем \nсостоянии."
+                app:layout_constraintTop_toBottomOf="@id/tv_Description"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp24"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

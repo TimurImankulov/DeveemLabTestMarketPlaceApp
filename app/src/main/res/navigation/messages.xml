@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/messages"
+    app:startDestination="@id/messagesFragment">
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.marketplaceapp.ui.bottomnavigation.messages.MessagesFragment"
+        android:label="MessagesFragment" />
+</navigation>

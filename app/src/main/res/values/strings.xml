@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MarketPlaceApp</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="divider">Divider</string>
+    <string name="messages">Messages</string>
+    <string name="profile">Profile</string>
+    <string name="search">Поиск</string>
+    <string name="price">Цена</string>
+</resources>

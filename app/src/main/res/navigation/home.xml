@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.marketplaceapp.ui.bottomnavigation.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_agriculturalMachineryFragment"
+            app:destination="@id/agriculturalMachineryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_constructionMaterialsFragment"
+            app:destination="@id/constructionMaterialsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_agrobazaarFragment"
+            app:destination="@id/agrobazaarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agriculturalMachineryFragment"
+        android:name="com.example.marketplaceapp.ui.bottomnavigation.home.agrmachinery.AgriculturalMachineryFragment"
+        android:label="AgriculturalMachineryFragment" />
+    <fragment
+        android:id="@+id/constructionMaterialsFragment"
+        android:name="com.example.marketplaceapp.ui.bottomnavigation.home.constmaterials.ConstructionMaterialsFragment"
+        android:label="ConstructionMaterialsFragment" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.marketplaceapp.ui.productdetails.DetailsFragment"
+        android:label="DetailsFragment" />
+    <fragment
+        android:id="@+id/agrobazaarFragment"
+        android:name="com.example.marketplaceapp.ui.bottomnavigation.home.agrobazaar.AgrobazaarFragment"
+        android:label="AgrobazaarFragment" >
+        <action
+            android:id="@+id/action_agrobazaarFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+</navigation>
