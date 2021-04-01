@@ -2,9 +2,20 @@
     <string name="app_name">MarketPlaceApp</string>
     <string name="home">Home</string>
     <string name="favorites">Favorites</string>
-    <string name="divider">Divider</string>
+    <string name="add">Add</string>
     <string name="messages">Messages</string>
     <string name="profile">Profile</string>
     <string name="search">Поиск</string>
     <string name="price">Цена</string>
+    <string name="from">от</string>
+    <string name="quantity">шт</string>
+    <string name="views">789 просмотров</string>
+    <string name="update">Дата обновления</string>
+    <string name="city">Бишкек</string>
+    <string name="data">03 Май, 2020</string>
+    <string name="call">Позвонить</string>
+    <string name="message">Написать</string>
+    <string name="tittle">Продаю домашнюю \nбиблиотеку, недорого</string>
+    <string name="kgz">KGZ</string>
+    <string name="description">Книги новые и б\\у в хорошем \nсостоянии.</string>
 </resources>

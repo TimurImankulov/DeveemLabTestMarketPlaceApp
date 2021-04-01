@@ -34,9 +34,9 @@ class FavoritesFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId){
-            R.id.favorite -> Toast.makeText(requireActivity(),"Favorite", Toast.LENGTH_LONG).show()
-            R.id.share -> Toast.makeText(requireActivity(),"Share", Toast.LENGTH_LONG).show()
+        when (item.itemId) {
+            R.id.favorite -> Toast.makeText(requireActivity(), "Favorite", Toast.LENGTH_LONG).show()
+            R.id.share -> Toast.makeText(requireActivity(), "Share", Toast.LENGTH_LONG).show()
         }
         return super.onOptionsItemSelected(item)
     }

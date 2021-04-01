@@ -13,6 +13,9 @@ object DiffUtilsItems {
                     && oldItem.measure == newItem.measure
                     && oldItem.description == newItem.description
                     && oldItem.location == newItem.location
+                    && oldItem.title == newItem.title
+                    && oldItem.views == newItem.views
+                    && oldItem.data == newItem.data
         }
 
         override fun areContentsTheSame(oldItem: ProductModel, newItem: ProductModel): Boolean {

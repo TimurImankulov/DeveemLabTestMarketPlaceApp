@@ -14,11 +14,14 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="CustomTabStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">@font/opensans_regular</item>
-        <item name="android:textAllCaps">true</item>
-
-
+    <style name="ToolbarColored" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorSecondary">#ffffff</item>
     </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
 </resources>

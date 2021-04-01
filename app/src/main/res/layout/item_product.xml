@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_Product"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:elevation="@dimen/dp10"
+    android:layout_height="@dimen/dp291"
+    android:layout_margin="@dimen/dp8"
     android:clickable="true"
+    android:elevation="@dimen/dp10"
     android:focusable="true"
-    android:layout_marginBottom="@dimen/dp10"
     app:cardCornerRadius="@dimen/dp10"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="163dp"
-        android:layout_height="291dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_Image"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_margin="4dp"
+            android:layout_width="@dimen/dp155"
+            android:layout_height="@dimen/dp155"
+            android:layout_margin="@dimen/dp4"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_Title"
+            android:id="@+id/tv_TitlePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8"
@@ -61,7 +61,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/sp18"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_Title" />
+            app:layout_constraintTop_toBottomOf="@id/tv_TitlePrice" />
 
         <TextView
             android:id="@+id/tv_Currency"
@@ -74,15 +74,15 @@
             android:textColor="@color/black"
             android:textSize="@dimen/sp18"
             app:layout_constraintStart_toEndOf="@id/tv_Price"
-            app:layout_constraintTop_toBottomOf="@id/tv_Title" />
+            app:layout_constraintTop_toBottomOf="@id/tv_TitlePrice" />
 
         <TextView
             android:id="@+id/tv_Measure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp4"
-            android:layout_marginTop="@dimen/dp8"
             android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp1"
             android:fontFamily="@font/opensans_semibold"
             android:text="за 1 кг"
             android:textColor="@color/color_black"
@@ -91,7 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/tv_Description"
+            android:id="@+id/tv_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8"
@@ -115,9 +115,9 @@
             android:text="Джалал-Абад"
             android:textColor="@color/red"
             android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

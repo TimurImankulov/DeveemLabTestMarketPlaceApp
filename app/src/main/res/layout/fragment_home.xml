@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dp16"
         android:layout_marginTop="@dimen/dp36"
-        app:cardCornerRadius="@dimen/dp10"
         android:elevation="@dimen/dp36"
+        app:cardCornerRadius="@dimen/dp10"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,11 +21,14 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/ed_Search"
+                android:id="@+id/et_Search"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp48"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/dp16"
                 android:fontFamily="@font/opensans_regular"
                 android:hint="@string/search"
+                android:paddingStart="@dimen/dp20"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp16"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +41,13 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_Layout"
-        style="@style/CustomTabStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp20"
         app:layout_constraintTop_toBottomOf="@+id/cardSearch"
         app:tabIndicatorColor="@color/orange"
-        app:tabSelectedTextColor="@android:color/black" />
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextAppearance="@style/MineCustomTabText" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_Pager"

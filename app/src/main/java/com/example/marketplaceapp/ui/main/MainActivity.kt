@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val navIds = listOf(
             R.navigation.home,
             R.navigation.favorites,
-            R.navigation.divider,
+            R.navigation.add,
             R.navigation.messages,
             R.navigation.profile
         )

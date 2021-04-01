@@ -1,7 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
     android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_Image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp300"
+                android:scaleType="centerCrop"
+                android:src="@drawable/apples"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:theme="@style/ToolbarColored" />
+
+            <TextView
+                android:id="@+id/tv_Views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp16"
+                android:drawableLeft="@drawable/ic_view"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/views"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Image" />
+
+            <TextView
+                android:id="@+id/tv_UpDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp24"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/update"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Image" />
+
+            <TextView
+                android:id="@+id/tv_Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/city"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Views" />
+
+            <TextView
+                android:id="@+id/tv_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginEnd="@dimen/dp24"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/data"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_UpDate" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_Call"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp36"
+                android:layout_marginEnd="@dimen/dp8"
+                android:background="@drawable/bg_btn_green"
+                android:clickable="true"
+                android:elevation="@dimen/dp16"
+                android:focusable="true"
+                app:layout_constraintEnd_toStartOf="@id/btn_Message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Location">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="@dimen/dp8"
+                    android:elevation="@dimen/dp16"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/call"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_Message"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp36"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/bg_btn_grey"
+                android:clickable="true"
+                android:elevation="@dimen/dp16"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp24"
+                android:paddingEnd="@dimen/dp24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Location">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_message"
+                    android:drawablePadding="@dimen/dp8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/message"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp24"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/tittle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_Call" />
+
+            <TextView
+                android:id="@+id/tv_From"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp24"
+                android:layout_marginEnd="@dimen/dp8"
+                android:layout_marginBottom="@dimen/dp3"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/from"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintBottom_toBottomOf="@id/tv_Price"
+                app:layout_constraintEnd_toStartOf="@id/tv_Price" />
+
+            <TextView
+                android:id="@+id/tv_Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginEnd="@dimen/dp24"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="250"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_Message" />
+
+            <TextView
+                android:id="@+id/tv_Currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp24"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/kgz"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Price" />
+
+            <TextView
+                android:id="@+id/tv_Quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp24"
+                android:layout_marginBottom="@dimen/dp4"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/quantity"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Currency" />
+
+            <TextView
+                android:id="@+id/tv_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp24"
+                android:fontFamily="@font/opensans_regular"
+                android:paddingBottom="@dimen/dp20"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

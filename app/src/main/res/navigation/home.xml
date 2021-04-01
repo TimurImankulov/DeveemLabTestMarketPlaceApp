@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_agrobazaarFragment"
             app:destination="@id/agrobazaarFragment" />
+        <action
+            android:id="@+id/to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/agriculturalMachineryFragment"
@@ -28,13 +31,19 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.marketplaceapp.ui.productdetails.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment" >
+        <argument
+            android:name="details"
+            app:argType="com.example.marketplaceapp.data.model.ProductModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/agrobazaarFragment"
         android:name="com.example.marketplaceapp.ui.bottomnavigation.home.agrobazaar.AgrobazaarFragment"
         android:label="AgrobazaarFragment" >
         <action
-            android:id="@+id/action_agrobazaarFragment_to_detailsFragment"
+            android:id="@+id/to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
 </navigation>
